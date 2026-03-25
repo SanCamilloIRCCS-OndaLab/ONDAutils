@@ -11,6 +11,8 @@
 #'
 #' @returns a data frame with two columns, `true.s` and `obs.s`.
 #' @export
+#' @examples
+#' simulate_scores(100, 0.7, mu_true = 10, sd_true = 1)
 
 simulate_scores <- function(n, rel, mu_true = 0, sd_true = 1) {
 if (rel <= 0 || rel >= 1) stop("rel must be in (0,1).")
