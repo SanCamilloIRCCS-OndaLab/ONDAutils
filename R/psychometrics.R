@@ -10,6 +10,7 @@
 #' sd_true = standard deviation of the population
 #'
 #' @returns a data frame with two columns, `true.s` and `obs.s`.
+#' @export
 
 simulate_scores <- function(n, rel, mu_true = 0, sd_true = 1) {
 if (rel <= 0 || rel >= 1) stop("rel must be in (0,1).")
@@ -40,6 +41,7 @@ return(df)
 #' plot_thresh = `logical`, should the threshold be plotted?
 #'
 #' @returns a plot with the simulated scores.
+#' @export
 
 simulate_obs <- function(Ts, n.obs, Rel = 0.7, mu_true, sd_true, label="True - observed relationship", plot_thresh=FALSE){
   
