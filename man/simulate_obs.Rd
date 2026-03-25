@@ -6,8 +6,8 @@
 \usage{
 simulate_obs(
   Ts,
-  n.obs,
-  Rel = 0.7,
+  n,
+  rel = 0.7,
   mu_true,
   sd_true,
   label = "True - observed relationship",
@@ -15,9 +15,9 @@ simulate_obs(
 )
 }
 \arguments{
-\item{n.obs}{= number of observations
+\item{n}{= number of observations
 Ts = the current True score (on which observed are computed)
-Rel = reliability value (from 0 to 1)
+rel = reliability value (from 0 to 1)
 mu_true = mean of population
 sd_true = standard deviation of the population
 label = the title of the plot
@@ -28,4 +28,7 @@ a plot with the simulated scores.
 }
 \description{
 A function to simulate scores providing reliability
+}
+\examples{
+simulate_obs(Ts = 5, n = 20, rel=0.8, mu_true = 8, sd_true = 2)
 }
