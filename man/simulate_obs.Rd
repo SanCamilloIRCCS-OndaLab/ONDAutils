@@ -32,3 +32,8 @@ A function to simulate scores providing reliability
 \examples{
 simulate_obs(Ts = 5, n = 20, rel=0.8, mu_true = 8, sd_true = 2)
 }
+\seealso{
+Other psychometrics: 
+\code{\link{simulate_scores}()}
+}
+\concept{psychometrics}

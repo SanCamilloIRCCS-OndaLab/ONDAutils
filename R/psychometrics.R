@@ -11,6 +11,7 @@
 #'
 #' @returns a data frame with two columns, `true.s` and `obs.s`.
 #' @export
+#' @family psychometrics
 #' @examples
 #' simulate_scores(n = 100, rel = 0.7, mu_true = 10, sd_true = 1)
 
@@ -44,6 +45,7 @@ return(df)
 #'
 #' @returns a plot with the simulated scores.
 #' @export
+#' @family psychometrics
 #' @examples
 #' simulate_obs(Ts = 5, n = 20, rel=0.8, mu_true = 8, sd_true = 2)
 

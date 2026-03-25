@@ -21,3 +21,8 @@ A function to simulate scores providing reliability
 \examples{
 simulate_scores(n = 100, rel = 0.7, mu_true = 10, sd_true = 1)
 }
+\seealso{
+Other psychometrics: 
+\code{\link{simulate_obs}()}
+}
+\concept{psychometrics}
