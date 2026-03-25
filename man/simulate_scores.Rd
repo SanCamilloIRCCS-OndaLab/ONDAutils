@@ -19,5 +19,5 @@ a data frame with two columns, `true.s` and `obs.s`.
 A function to simulate scores providing reliability
 }
 \examples{
-simulate_scores(100, 0.7, mu_true = 10, sd_true = 1)
+simulate_scores(n = 100, rel = 0.7, mu_true = 10, sd_true = 1)
 }
