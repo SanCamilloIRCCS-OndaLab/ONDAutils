@@ -59,8 +59,6 @@ simulate_obs <- function(Ts, n, rel = 0.7, mu_true, sd_true, label="True - obser
   cut_off = mu_true-1.64*sd_true
   ylims = c(mu_true-3*sd_true, mu_true+3*sd_true)
   
-  print(Xs)
-  
   # calculate mean of observed scores (the larger the number of repeated measurement, the better the approximation to the True score)
   #mean(Xs) 
   
