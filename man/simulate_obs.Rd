@@ -11,6 +11,7 @@ simulate_obs(
   mu_true,
   sd_true,
   label = "True - observed relationship",
+  plot = TRUE,
   plot_thresh = FALSE
 )
 }
@@ -21,10 +22,11 @@ rel = reliability value (from 0 to 1)
 mu_true = mean of population
 sd_true = standard deviation of the population
 label = the title of the plot
+plot_res = `logical`, a plot with the results.
 plot_thresh = `logical`, should the threshold be plotted?}
 }
 \value{
-a plot with the simulated scores.
+a vector with observed scores given the true. Optiomally, plot with the simulated scores.
 }
 \description{
 A function to simulate scores providing reliability

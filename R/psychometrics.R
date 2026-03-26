@@ -41,15 +41,16 @@ return(df)
 #' mu_true = mean of population
 #' sd_true = standard deviation of the population
 #' label = the title of the plot
+#' plot_res = `logical`, a plot with the results.
 #' plot_thresh = `logical`, should the threshold be plotted?
 #'
-#' @returns a plot with the simulated scores.
+#' @returns a vector with observed scores given the true. Optiomally, plot with the simulated scores.
 #' @export
 #' @family psychometrics
 #' @examples
 #' simulate_obs(Ts = 5, n = 20, rel=0.8, mu_true = 8, sd_true = 2)
 
-simulate_obs <- function(Ts, n, rel = 0.7, mu_true, sd_true, label="True - observed relationship", plot_thresh=FALSE){
+simulate_obs <- function(Ts, n, rel = 0.7, mu_true, sd_true, label="True - observed relationship", plot = TRUE, plot_thresh=FALSE){
   
   sd_error <- sd_true * sqrt((1 - rel) / rel)
   Xs = Ts + rnorm(n, mean = 0,    sd = sd_error)
@@ -74,6 +75,7 @@ simulate_obs <- function(Ts, n, rel = 0.7, mu_true, sd_true, label="True - obser
     curr_bg="white"
   }
   
+  if (plot_res){
   # plot observed scores as compared to True Score
   plot(1:n, Xs, ylim=ylims, pch=21, bg=curr_bg, main=label)
   lines(1:n, Xs)
@@ -81,7 +83,9 @@ simulate_obs <- function(Ts, n, rel = 0.7, mu_true, sd_true, label="True - obser
   if (plot_thresh){
     abline(h=cut_off, lty=2) 
   }
+  }
   
+  # currently deactivated
   #png(paste0("Figure_true_obs_", sd_true, ".png"), res=200, height=800, width=1200)
   #plot(1:n, Xs, ylim=ylims, pch=21, bg=curr_bg, main=label)
   #lines(1:n, Xs)
@@ -90,6 +94,7 @@ simulate_obs <- function(Ts, n, rel = 0.7, mu_true, sd_true, label="True - obser
   #  abline(h=cut_off, lty=2) 
   #}
   #dev.off()
+  return(Xs)
   
 }
 
