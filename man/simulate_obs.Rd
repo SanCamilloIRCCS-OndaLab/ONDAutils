@@ -11,7 +11,7 @@ simulate_obs(
   mu_true,
   sd_true,
   label = "True - observed relationship",
-  plot = TRUE,
+  plot_res = TRUE,
   plot_thresh = FALSE
 )
 }

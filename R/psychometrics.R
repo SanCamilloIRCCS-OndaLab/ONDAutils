@@ -50,7 +50,7 @@ return(df)
 #' @examples
 #' simulate_obs(Ts = 5, n = 20, rel=0.8, mu_true = 8, sd_true = 2)
 
-simulate_obs <- function(Ts, n, rel = 0.7, mu_true, sd_true, label="True - observed relationship", plot = TRUE, plot_thresh=FALSE){
+simulate_obs <- function(Ts, n, rel = 0.7, mu_true, sd_true, label="True - observed relationship", plot_res = TRUE, plot_thresh=FALSE){
   
   sd_error <- sd_true * sqrt((1 - rel) / rel)
   Xs = Ts + rnorm(n, mean = 0,    sd = sd_error)
