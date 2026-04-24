@@ -57,7 +57,7 @@ simulate_obs <- function(Ts, n, rel = 0.7, mu_true, sd_true, label="True - obser
 
   # set cut-off as compared to the hypothetical Population mean (mu_true)
   cut_off = mu_true-1.64*sd_true
-  ylims = c(mu_true-3*sd_true, mu_true+3*sd_true)
+  ylims = c(min(Ts, mu_true)-3*sd_true, max(Ts, mu_true)+3*sd_true)
   
   # calculate mean of observed scores (the larger the number of repeated measurement, the better the approximation to the True score)
   #mean(Xs) 
