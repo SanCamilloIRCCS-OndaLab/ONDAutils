@@ -43,14 +43,15 @@ return(df)
 #' label = the title of the plot
 #' plot_res = `logical`, a plot with the results.
 #' plot_thresh = `logical`, should the threshold be plotted?
-#'
+#' ... = further arguments to be passed to the plot function.
+#' 
 #' @returns a vector with observed scores given the true. Optiomally, plot with the simulated scores.
 #' @export
 #' @family psychometrics
 #' @examples
 #' simulate_obs(Ts = 5, n = 20, rel=0.8, mu_true = 8, sd_true = 2)
 
-simulate_obs <- function(Ts, n, rel = 0.7, mu_true, sd_true, label="True - observed relationship", plot_res = TRUE, plot_thresh=FALSE){
+simulate_obs <- function(Ts, n, rel = 0.7, mu_true, sd_true, label="True - observed relationship", plot_res = TRUE, plot_thresh=FALSE, ...){
   
   sd_error <- sd_true * sqrt((1 - rel) / rel)
   Xs = Ts + rnorm(n, mean = 0,    sd = sd_error)
@@ -75,7 +76,7 @@ simulate_obs <- function(Ts, n, rel = 0.7, mu_true, sd_true, label="True - obser
   
   if (plot_res){
   # plot observed scores as compared to True Score
-  plot(1:n, Xs, ylim=ylims, pch=21, bg=curr_bg, main=label)
+  plot(1:n, Xs, ylim=ylims, pch=21, bg=curr_bg, main=label, ...)
   lines(1:n, Xs)
   abline(h=Ts)
   if (plot_thresh){
