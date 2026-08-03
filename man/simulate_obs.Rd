@@ -12,7 +12,8 @@ simulate_obs(
   sd_true,
   label = "True - observed relationship",
   plot_res = TRUE,
-  plot_thresh = FALSE
+  plot_thresh = FALSE,
+  ...
 )
 }
 \arguments{
@@ -23,7 +24,8 @@ mu_true = mean of population
 sd_true = standard deviation of the population
 label = the title of the plot
 plot_res = `logical`, a plot with the results.
-plot_thresh = `logical`, should the threshold be plotted?}
+plot_thresh = `logical`, should the threshold be plotted?
+... = further arguments to be passed to the plot function.}
 }
 \value{
 a vector with observed scores given the true. Optiomally, plot with the simulated scores.
