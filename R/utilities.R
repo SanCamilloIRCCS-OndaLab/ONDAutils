@@ -1,12 +1,13 @@
-#' show column names 
+#' Show column names as a one-column matrix
 #'
 #' @description
-#' A convenience function to show column names 
-#' 
-#' @param 
-#' x = a data.frame
+#' A convenience function to list the column names of a data frame as a
+#' one-column matrix, so that each name is printed on its own numbered row.
+#' This makes it quick to find a column's position.
 #'
-#' @return a matrix with `data.frame` names
+#' @param df A data.frame (or any object with column names).
+#'
+#' @return A one-column character matrix with the column names of `df`.
 #' @export
 #' @family utilities
 #' @examples
@@ -15,8 +16,5 @@
 #' cn(dat)
 
 cn <- function(df) {
-as.matrix(colnames(df))
-return(df)
+  return(as.matrix(colnames(df)))
 }
-
-

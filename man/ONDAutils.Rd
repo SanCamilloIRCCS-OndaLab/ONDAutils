@@ -6,16 +6,16 @@
 \alias{ONDAutils}
 \title{ONDA Utilities}
 \description{
-A collection of utility functions for the ONDA workflow.
+A collection of generic utility functions used across the projects of the
+ONDA Lab.
 }
 \details{
-\code{ONDAutils} provides a set of general-purpose utility functions
-designed to support and streamline ONDA-related data processing tasks.
+\code{ONDAutils} contains only general-purpose helpers (e.g. \code{\link{cn}}
+to quickly inspect the column names of a data frame), with no
+domain-specific methods.
 
-The package is organized around helper functions that cover common
-operations needed across ONDA projects.
-}
-\author{
-Your Name \email{you@example.com}
+Psychometric functions previously included here (\code{simulate_scores()}
+and \code{simulate_obs()}) have moved to the \code{cnp} package
+(\url{https://github.com/giorgioarcara/cnp}).
 }
 \keyword{internal}
